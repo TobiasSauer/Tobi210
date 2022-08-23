@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: #92257A;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo_total" "lista_ordenada" "buscador_header" "logo_registro";
+    align-items: center;
+    grid-area: header;
+}
+main{
+    color: white;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    background-color: #212120;
+    grid-area: main;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #92257A;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    grid-area: footer;
+}
+body{
+    height: auto;
+    display: grid;
+    grid-template-rows: 70px 2fr 120px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+header > ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    font-weight: bold;
+}
+.enlace_lista{
+    color:#212120;
+    padding: 10px;
+    grid-area: lista_ordenada;
+}
+.buscador_header{
+    height: 30px;
+    width: 250px;
+    font-size: 15px;
+    background-color: #41413c;
+    border-radius: 1.5rem;
+    border: 1px solid #41413c;
+    grid-area: buscador_header;
+}
+.logo_registro {
+    height: 50px;
+    width: 50px;
+    grid-area: logo_registro;
+}
+.enlace_logo_icon {
+    height: 50px;
+    width: 50px;
+    grid-area: logo_total;
+}
+header > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enlace_logo {
+    color: #212120;
+}
+a:hover{
+    color: white;
+}
+main img{
+    height: 150px;
+    width: 150px;
+}
+main > div > ul > li{
+    padding: 20px;
+    display: flex;
+}
+main a {
+    color: #92257A;
+}
+.texto_juego {
+    padding: 15px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+}
+.li_contenido {
+    flex-direction: column;
+}
+.redes_sociales > img{
+    width: 50px;
+    height: 50px;
+}
+.redes_sociales{
+    padding: 30px;
+}
+.politicas{
+    color: black;
+    padding: 30px;
+}
+.main_contacto{
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_contacto > div{
+    background-color: #41413c;
+    padding: 20px;
+    height: 700px;
+    width: 600px;
+    border-radius: 1.5rem;
+}
+.form_contacto{
+    font-size: 20px;
+    flex-direction: column;
+    display: flex;
+}
+.input_contacto{
+    background-color: #41413c;
+    color: white;
+    border: 2px solid #92257A;
+    border-radius: 1.5rem;
+    font-size: 15px;
+    margin: 20px;
+    height: 40px;
+}
+.input_mensaje_contacto{
+    background-color: #41413c;
+    color: white;
+    border: 2px solid #92257A;
+    border-radius: 1.5rem;
+    font-size: 15px;
+    margin: 20px;
+    height: 200px;
+}
+.texto_contacto{
+    margin: auto;
+    padding: 10px;
+}
+.button_contacto{
+    color: white;
+    border: 2px solid #92257A;
+    border-radius: 1.5rem;
+    font-size: 15px;
+    background-color: #92257A;
+    margin: 20px;
+    height: 40px;
+}
+.main_tyc{
+    height: 100vh;
+}
+.main_tyc > div {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+}
+.contenido_tyc{
+    margin: 15px;
+}
+@media only screen and (max-width: 500px) and (orientation: portrait) 
+{
+    body{
+        display: grid;
+        grid-template-rows: auto 2fr auto;
+        grid-template-columns: 1fr;
+}
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "logo_registro" "logo_total"
+                             "lista_ordenada"
+                             "buscador_header";
+        grid-area: header;
+    }
+    header > ul{
+        display: flex;
+        justify-content: center;
+    }
+    footer div{
+        display: flex;
+        align-content: space-around;
+    }
+}
